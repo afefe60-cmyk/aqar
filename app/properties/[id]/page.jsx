@@ -70,6 +70,31 @@ export default function PropertyDetailPage() {
 
   return (
     <div className="min-h-screen bg-stone-50 pb-20">
+      {/* Property JSON-LD Structured Data for Google Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": property.title,
+            "image": images,
+            "description": property.description,
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "SDG",
+              "price": property.priceSDG,
+              "availability": "https://schema.org/InStock",
+              "url": `https://aqar.sudanzon.com/properties/${property.id}`,
+              "seller": {
+                "@type": "Organization",
+                "name": property.agency?.name || "سودان زون للعقارات"
+              }
+            }
+          })
+        }}
+      />
+
       {/* 1. Breadcrumb navigation */}
       <div className="bg-white border-b border-stone-200">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-2 text-xs text-stone-500 overflow-x-auto no-scrollbar">
