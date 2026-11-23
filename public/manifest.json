@@ -1,0 +1,21 @@
+{
+  "name": "سودان زون للعقارات",
+  "short_name": "SudanZon Real Estate",
+  "description": "منصة بيع وشراء وتأجير العقارات والأراضي في السودان",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b45309",
+  "icons": [
+    {
+      "src": "/app-icon.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

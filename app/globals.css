@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sz-terracotta: #b45309;
+  --sz-terracotta-dark: #78350f;
+  --sz-gold: #f59e0b;
+  --sz-green: #1e3a2b;
+  --sz-bg: #fafaf9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--sz-bg);
+  color: #1c1917;
+  direction: rtl;
+  text-align: right;
+  overflow-x: hidden;
+  letter-spacing: 0 !important;
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure Arabic headings never collide or squish letters */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0 !important;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f4;
+}
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
+.realestate-gradient-header {
+  background: linear-gradient(135deg, #1e3a2b 0%, #294c39 50%, #1e3a2b 100%);
+}
+
+.realestate-gradient-banner {
+  background: linear-gradient(135deg, #78350f 0%, #b45309 50%, #92400e 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #fef3c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
